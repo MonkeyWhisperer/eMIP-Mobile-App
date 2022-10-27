@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CachedImages\business_team.json" />
+    <None Remove="CachedImages\earth_pulse.json" />
+    <None Remove="CachedImages\heart_globe.json" />
+    <None Remove="CachedImages\phone_globe.json" />
+    <None Remove="CachedImages\previous.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="CachedImages\business_team.json" />
+    <EmbeddedResource Include="CachedImages\earth_pulse.json" />
+    <EmbeddedResource Include="CachedImages\heart_globe.json" />
+    <EmbeddedResource Include="CachedImages\phone_globe.json" />
+    <EmbeddedResource Include="CachedImages\previous.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.1.0" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+  </ItemGroup>
+</Project>
